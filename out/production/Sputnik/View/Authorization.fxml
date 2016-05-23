@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Логин:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="10.0" layoutY="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="10.0" layoutY="77.0" text="Пароль:" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="11.0" layoutY="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </PasswordField>
+      <HBox layoutX="161.0" layoutY="168.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button layoutX="161.0" layoutY="168.0" mnemonicParsing="false" text="Вход">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="244.0" layoutY="168.0" mnemonicParsing="false" text="Отмена">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="212.0" layoutY="136.0" text="Зарегестрироваться" textFill="#4f5aee" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="136.0">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
