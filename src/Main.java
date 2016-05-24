@@ -26,6 +26,8 @@ public class Main extends Application {
         showAdministration();
 
         showAuthorization();
+
+
     }
 
     private void showAuthorization() {
