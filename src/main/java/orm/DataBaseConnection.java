@@ -19,6 +19,14 @@ public enum  DataBaseConnection {
         }
     }
 
+    public void addUser(tableUsersEntity user){
+        try (Session session = HibernateSessionFactory.getSession()){
+            session.beginTransaction();
+            session.save(user);
+            session.getTransaction().commit();
+        }
+    }
+
 
 
 }

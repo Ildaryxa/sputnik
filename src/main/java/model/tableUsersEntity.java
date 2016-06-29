@@ -4,6 +4,7 @@ import com.sun.org.glassfish.gmbal.Description;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ import java.util.Set;
 @Entity
 @Table(name = "Users", schema = "dbo", catalog = "SPYTNIK")
 @Description(value = "Пользователи")
-public class tableUsersEntity {
+public class tableUsersEntity implements Comparable<tableUsersEntity> {
 
     @Basic
     @Column(name = "name")
@@ -58,10 +59,6 @@ public class tableUsersEntity {
     @OneToMany(mappedBy = "login")
     private Set<tableCommentsEntity> commentsEntities = new HashSet<tableCommentsEntity>();
 
-    /*
-    @OneToOne(mappedBy = "user")
-    private tableOwnerEntity owner;
-    */
     public String getName() {
         return name;
     }
@@ -153,5 +150,16 @@ public class tableUsersEntity {
         result = 31 * result + (dataRegistration != null ? dataRegistration.hashCode() : 0);
         result = 31 * result + (locked ? 1 : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(tableUsersEntity o) {
+        if (getSurname().compareTo(o.getSurname()) == 0) {
+            if (getName().compareTo(o.getName()) == 0){
+                return getLogin().compareTo(o.getLogin());
+            }else
+                return -1;
+        }else
+            return -1;
     }
 }

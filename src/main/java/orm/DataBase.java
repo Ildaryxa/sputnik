@@ -32,4 +32,8 @@ public enum  DataBase {
         users = addCollection(connection.getUsersData());
         return users;
     }
+
+    public void addUser(tableUsersEntity user){
+        connection.addUser(user);
+    }
 }
